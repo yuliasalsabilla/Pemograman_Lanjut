@@ -49,6 +49,7 @@ public class NIM {
         }
         return "Pertanian dan Peternakan";
     }
+
     public String getJurusan() {
         char p = nim.charAt(4);
         char q = nim.charAt(5);
@@ -73,6 +74,7 @@ public class NIM {
             }
             return "UNKNOWN";
         }
+
         public String getNoUrut(){
         char c = nim.charAt(7);
         char d = nim.charAt(8);
