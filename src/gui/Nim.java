@@ -32,13 +32,6 @@ public class Nim {
         this.nim = nim;
     }
 
-    @Override
-    public String toString() {
-        return "Mahasiswa{" +
-                "nama='" + nama + '\'' +
-                ", nim='" + nim + '\'' +
-                '}';
-    }
     public String getJenjangPendidikan() {
         char a = nim.charAt(0);
         if (a == '1') {
