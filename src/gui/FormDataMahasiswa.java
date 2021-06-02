@@ -17,16 +17,17 @@ public class FormDataMahasiswa {
     private JLabel LabelJK;
     private JLabel LabelError;
     private JPanel bootPanel;
+    private JButton selesaiButton;
+    private JTextField textNama;
 
     public FormDataMahasiswa() {
         bootPanel.setVisible(false);
         buttonPencarian.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String nama = textNama.getText();
                 String angka = textNim.getText();
-                final JPanel a = new JPanel();
 
-                textNim.setText("");
                 Nim nim = new Nim();
                 nim.setNim(angka);
                 if ((!angka.matches("[0-9]+")) || (nim.getJenisKelamin()=="") || (nim.getJenjangPendidikan()=="") || (nim.getNoUrut()=="") || (nim.getTahunMasuk()=="") || (nim.getJurusan()=="") || (nim.getFakultas()=="")){
@@ -45,7 +46,15 @@ public class FormDataMahasiswa {
                     LabelJK.setText(nim.getJenisKelamin());
                     LabelNoUrut.setText(nim.getNoUrut());
                 }
-
+            }
+        });
+        selesaiButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textNim.setText("");
+                textNama.setText("");
+                bootPanel.setVisible(false);
+                LabelError.setVisible(false);
             }
         });
     }
