@@ -30,10 +30,10 @@ public class FormSorting {
             public void actionPerformed(ActionEvent e) {
                 DefaultTableModel model = (DefaultTableModel) tableSorting.getModel();
                 String input = textData.getText();
-                String[] stmp = input.split(",");
+                String[] tmp = input.split(",");
                 String data = textData.getText();
-                int size = stmp.length;
-                System.out.println(stmp.length);
+                int size = tmp.length;
+                System.out.println(tmp.length);
 
                 if (data.isBlank()){
                     JOptionPane.showMessageDialog(rootPanel,
