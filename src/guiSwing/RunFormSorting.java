@@ -1,6 +1,5 @@
 package guiSwing;
 
-import table.ExampleTable;
 
 import javax.swing.*;
 
