@@ -13,7 +13,6 @@ public class FormSorting {
     private JButton buttonUrut;
     private JTable tableSorting;
     private JButton buttonSelesai;
-    private JTextField textJumlah;
     private DefaultTableModel tableModel;
     private boolean added = false;
 
